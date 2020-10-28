@@ -10,9 +10,9 @@ chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
-# browser = webdriver.Chrome('/usr/bin/chromedriver', chrome_options=chrome_options)
+browser = webdriver.Chrome('/usr/bin/chromedriver', chrome_options=chrome_options)
 #window电脑本地
-browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\Application\chromedriver")
+# browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\Application\chromedriver")
 
 
 def saveFile(message):
