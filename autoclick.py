@@ -86,7 +86,7 @@ def vpn():
         saveFile("签到代码存在异常"+str(e))
 
 if __name__ == '__main__':
-    # epidemic_auto_checkin()
-    vpn()
+    epidemic_auto_checkin()
+    # vpn()
     # 脚本运行成功,退出浏览器
     browser.quit()
