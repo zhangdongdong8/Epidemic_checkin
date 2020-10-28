@@ -33,11 +33,16 @@ jobs:
               && sudo chmod +x /usr/local/bin/chromedriver \
               && chromedriver --version
         - name: 'Get Date'
+          # run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shenzhen' date '+%Y-%m-%d %T %Z')"
           run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shenzhen' date -u -d"+8 hour" +'%Y-%m-%d %H:%M:%S')"
         - name: 'AutoClick'
           env:
             ActonMartin_USER: ${{ secrets.ActonMartin_USER }}
             ActonMartin_PASSWORD: ${{ secrets.ActonMartin_PASSWORD }}
+            VPN1_USER: ${{ secrets.VPN1_USER }}
+            VPN1_PASSWORD: ${{ secrets.VPN1_PASSWORD }}
+            VPN2_USER: ${{ secrets.VPN2_USER }}
+            VPN2_PASSWORD: ${{ secrets.VPN2_PASSWORD }}
           run: python autoclick.py
         - name: 'Send mail'
           uses: dawidd6/action-send-mail@master
