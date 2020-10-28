@@ -5,7 +5,7 @@ on:
     types: started
   push:
   schedule:
-    - cron: '0 3,5 * * *'
+    - cron: '0 19,21 * * *'
 
 jobs:
   bot:
@@ -39,6 +39,10 @@ jobs:
           env:
             ActonMartin_USER: ${{ secrets.ActonMartin_USER }}
             ActonMartin_PASSWORD: ${{ secrets.ActonMartin_PASSWORD }}
+            VPN1_USER: ${{ secrets.VPN1_USER }}
+            VPN1_PASSWORD: ${{ secrets.VPN1_PASSWORD }}
+            VPN2_USER: ${{ secrets.VPN2_USER }}
+            VPN2_PASSWORD: ${{ secrets.VPN2_PASSWORD }}
           run: python autoclick.py
         - name: 'Send mail'
           uses: dawidd6/action-send-mail@master
