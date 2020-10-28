@@ -127,4 +127,4 @@ if __name__ == '__main__':
     # vpn1()
     # vpn2()
     # 脚本运行成功,退出浏览器
-    # browser.quit()
+    browser.quit()
