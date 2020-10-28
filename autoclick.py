@@ -10,9 +10,9 @@ chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
-browser = webdriver.Chrome('/usr/bin/chromedriver', chrome_options=chrome_options)
+# browser = webdriver.Chrome('/usr/bin/chromedriver', chrome_options=chrome_options)
 #window电脑本地
-# browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\Application\chromedriver")
+browser = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\Application\chromedriver")
 
 
 def saveFile(message):
@@ -33,16 +33,19 @@ def epidemic_auto_checkin():
         '//*[@id="password1"]').send_keys(os.environ['ActonMartin_PASSWORD'])
     # 在输入用户名和密码之后,点击登陆按钮
     browser.find_element_by_xpath("/html/body/main/section[2]/form/div[3]/input").click()
-    time.sleep(10)
+    time.sleep(1)
     try:
         if("今日已上报" in browser.find_element_by_xpath("/html/body/main/section/header/div[1]/span").text):
             saveFile("明日再来!")
         else:
             browser.find_element_by_xpath("/html/body/main/section/header/div[2]/button").click()
-            time.sleep(5)
+            time.sleep(1)
             sreach_window=browser.current_window_handle
             # 这一句需要更改xpath，进行签到
             browser.find_element_by_xpath('//*[@id="submit_btn"]').click()
+            # 确认提交
+            time.sleep(1)
+            browser.find_element_by_xpath('/html/body/div[2]/div[3]/a[2]').click()
             # js = 'document.getElementById("checkin-div").children[0].click();'
             # browser.execute_script(js)
             print("今日打卡打卡成功")
@@ -124,4 +127,4 @@ if __name__ == '__main__':
     # vpn1()
     # vpn2()
     # 脚本运行成功,退出浏览器
-    browser.quit()
+    # browser.quit()
