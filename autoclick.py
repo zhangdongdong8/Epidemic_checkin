@@ -61,7 +61,7 @@ def vpn1():
     # 这里是找到输入框,发送要输入的用户名和密码,模拟登陆
     # 找到登录按钮跳转到登录窗口
     time.sleep(5)
-    browser.find_element_by_xpath('//*[@id="navbarSupportedContent"]/ul[2]/li/a').click()
+    browser.find_element_by_xpath('//*[@id="navbarSupportedContent"]').click()
     time.sleep(5)
     sreach_window=browser.current_window_handle
     # browser.find_element_by_xpath(
