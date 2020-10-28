@@ -42,7 +42,7 @@ def epidemic_auto_checkin():
             time.sleep(5)
             sreach_window=browser.current_window_handle
             # 这一句需要更改xpath，进行签到
-            browser.find_element_by_xpath("/html/body/main/section/header/div[2]/button").click()
+            browser.find_element_by_xpath('//*[@id="submit_btn"]').click()
             # js = 'document.getElementById("checkin-div").children[0].click();'
             # browser.execute_script(js)
             print("今日打卡打卡成功")
@@ -121,7 +121,7 @@ def vpn2():
 
 if __name__ == '__main__':
     epidemic_auto_checkin()
-    vpn1()
-    vpn2()
+    # vpn1()
+    # vpn2()
     # 脚本运行成功,退出浏览器
     browser.quit()
