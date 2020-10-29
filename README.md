@@ -8,27 +8,27 @@
 
 ## 1、把代码clone到本地或者直接点击fork按钮将工程复制到你的仓库
 
-![在这里插入图片描述](./image/fork.png)
+![在这里插入图片描述](./IMAGE/fork.png)
 
 ## 2、邮件配置
 
 本文以配置88邮箱为例。点击客户端设置，然后生成一个专用密码，将字符串复制，并把它放到第三步里面的MAIL_PASSWORD变量
 
-![在这里插入图片描述](./image/SMTP.png)
-![在这里插入图片描述](./image/SMTP2.png)
+![在这里插入图片描述](./IMAGE/SMTP.png)
+![在这里插入图片描述](./IMAGE/SMTP2.png)
 
 ## 3、配置你的账号和密码。
 在工程的secrets里面放置你的账号和密码。同样的，如果你不需要发送邮件通知可以不添加邮件配置。（ActonMartin_PASSWORD和ActonMartin_USER两个变量名需要跟epidemic.yml代码里面的一致）
 
-![在这里插入图片描述](./image/secrets.png)
+![在这里插入图片描述](./IMAGE/secrets.png)
 
 ## 4、修改自己的接收邮箱(如果不想接收邮箱，可以考虑在yml文件中删除下面的代码块)
 
-![在这里插入图片描述](./image/modify_1.png)
+![在这里插入图片描述](./IMAGE/modify_1.png)
 
-![在这里插入图片描述](./image/modify_2.png)
+![在这里插入图片描述](./IMAGE/modify_2.png)
 
-![在这里插入图片描述](./image/modify_3.png)
+![在这里插入图片描述](./IMAGE/modify_3.png)
 
 ### 4.1、不想接收邮件的话，删除下面的代码，同时在开始时可以不配置发送邮箱
 ```
@@ -47,7 +47,7 @@
 ```
 ## 5、修改运行时间
 
-![在这里插入图片描述](./image/time.png)
+![在这里插入图片描述](./IMAGE/time.png)
 
 ```
 name: 'epidemic'
@@ -63,11 +63,11 @@ on:
 
 ## 6、创建工作流(如果是fork的可以不用)
 
-![在这里插入图片描述](./image/workflow.png)
+![在这里插入图片描述](./IMAGE/workflow.png)
 
 ## 7、打开Action查看工作流
 
-![在这里插入图片描述](./image/workflow2.png)
+![在这里插入图片描述](./IMAGE/workflow2.png)
 
 
 ## 8、上面代码提交之后，会自动运行。同时你也可以点击star运行action
@@ -75,13 +75,13 @@ on:
 
 ## 9、运行结束后，会有邮件发送
 
-![在这里插入图片描述](./image/email.png)
+![在这里插入图片描述](./IMAGE/email.png)
 
 ## 10、停止运行
 
 之后要是不需要每天填报了，那进入setting-》action-》选择Disable Actions for this repository。该仓库的工作流将不再运行。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619100121815.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BvbGljZV8x,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](./IMAGE/stop.png)
 
 
 参考链接：[GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
