@@ -1,4 +1,4 @@
-# [AutoAction](https://github.com/Saujyun/AutoAction)简介
+# 简介
     该github工程主要是为了解决疫情期间需要不断地申报自身健康而建立,工程中使用GitHub Action来实现每天自动打卡工作。
 # 准备工作
     1.一个github账号
