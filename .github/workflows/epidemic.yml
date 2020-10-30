@@ -53,6 +53,6 @@ jobs:
             password: ${{ secrets.MAIL_PASSWORD }}
             subject: 三峡大学健康申报系统操作结果 (${{env.REPORT_DATE}})
             body: file://email.txt
-            to: chateba@vip.qq.com
+            to: 2652863980@qq.com
             from: GitHub Actions
             content_type: text/html
