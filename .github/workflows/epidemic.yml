@@ -5,7 +5,7 @@ on:
     types: started
   push:
   schedule:
-    - cron: '0 19,21 * * *'
+    - cron: '35 17,18,19 * * *'
 
 jobs:
   bot:
@@ -32,6 +32,10 @@ jobs:
               && sudo mv chromedriver /usr/local/bin/chromedriver \
               && sudo chmod +x /usr/local/bin/chromedriver \
               && chromedriver --version
+        - name: 'Get Date'
+          # run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shenzhen' date '+%Y-%m-%d %T %Z')"
+          # run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shenzhen' date -u -d"+8 hour" +'%Y-%m-%d %H:%M:%S')"
+          run: echo "REPORT_DATE=$(TZ=':Asia/Shenzhen' date -u -d"+8 hour" +'%Y-%m-%d %H:%M:%S')">> $GITHUB_ENV
         - name: 'AutoClick'
           env:
             ActonMartin_USER: ${{ secrets.ActonMartin_USER }}
